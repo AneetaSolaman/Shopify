@@ -1,0 +1,15 @@
+#image{
+    width: 310px;
+    height: 227px;
+    /* padding: 0px 15px; */
+    margin-top: 23px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+h3{
+    text-align: center;
+    font-size: small;
+}

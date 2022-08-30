@@ -1,0 +1,21 @@
+<div class="kk">
+    <div class="container3">
+        <div *ngIf="product">
+            <img src="{{product.image}}" id="image">
+                <div class="button">
+                    <button id="w" routerLink="/cart" class="btn btn-warning" (click)=addToCart()>ADD TO CART</button>&nbsp;
+                    <button id="d" class="btn btn-danger" routerLink="">GO TO HOME</button>
+                </div>
+            <div class="p"> 
+                <h3><b>{{product.ProductName}}</b></h3>
+                <h3><b>Price : {{product.Price}}</b></h3>
+                <h3><b>Size : {{product.Size}}</b></h3>
+                <h3><b>Category : {{product.tags}}</b></h3>
+                <h3><b>Color : {{product.Color}}</b></h3>
+                <h5>{{product.Description}}</h5>
+            </div>
+        </div>
+    </div>
+     
+</div>
+

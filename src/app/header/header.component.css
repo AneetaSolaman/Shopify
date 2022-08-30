@@ -1,0 +1,59 @@
+header{
+    background-color:rgb(121 59 124 / 49%);
+    
+    padding: 0px 0;
+    padding-bottom: 12px;
+    padding-top: 20px
+}
+.cart_icon{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 832px;
+    color: black;
+    margin-top: 13px;
+}
+.cart_icon :focus{
+    outline: none;
+    border: none;
+}
+.cart_icon i{
+    font-size: 24px;
+    color: black;
+}
+.cart_value{
+    position: absolute;
+    top: 1px;
+    right: -32;
+    background: rgb(186, 181, 172);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 4px 10px;
+    font-weight: 800;
+    font-size: 16px;
+    margin-left: 984px;
+}
+.form-control{
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 288px;
+    margin-top: -39px;
+}
+/* #shop{
+
+} */
+.icon{
+    margin-left: 60px;
+    color: black;
+    position: absolute;
+    z-index: 10;
+    right: 25%;
+    top: 35px;
+
+}
+#shop{
+    text-decoration-line: underline;
+}
+#cart{
+    text-align: right;
+    margin-top: -33px;
+}

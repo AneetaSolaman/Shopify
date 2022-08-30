@@ -1,0 +1,10 @@
+ <div class="card-top container-fluid">
+    <div class="container d-flex" id="k">
+        <div class="item" *ngFor="let item of tags">
+            <a routerLink="/tag/{{item.name}}">
+                <img src="{{item.image}}" alt="">
+                <h6 class="h6">{{item.name}}</h6>
+            </a>
+        </div>
+    </div>
+ </div>

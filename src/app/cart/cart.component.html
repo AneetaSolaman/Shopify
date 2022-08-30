@@ -1,0 +1,64 @@
+
+<ng-container *ngIf="product.length !=0 ">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.Number</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Qauntity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of product; let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.ProductName}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}"></td>
+                            <td>{{item.Description}}</td>
+                            <td>{{item.Price}}</td>
+                            <td><select name="" (change)="select()" [(ngModel)]="qty">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></td>
+                            <td>{{curtotal}}</td>
+                            <!-- <td>{{item.Action}}</td> -->
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fa fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    </div>
+    <button (click)="place()" id="place" class="btn btn-warning">PLACE ORDER</button>
+    </ng-container>
+    
+    
+    <ng-container *ngIf="product.length ==0">
+        <div class="container">
+            <div class="card">
+                <h5 class="card-title">My Cart</h5>
+            </div>
+        </div>
+        <div class="center">
+            <img src="../../assets/empty.jpg" alt="">
+            <div class="c">
+                <h4>Your cart is empty</h4>
+                <h6>Add item</h6>
+                <button routerLink="/products" class="btn btn-warning">Shop Now</button>
+            </div>
+        </div>
+        
+    </ng-container>
